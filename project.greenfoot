@@ -1,5 +1,6 @@
 #Greenfoot project file
 class.MyWorld.image=menuBackground.png
+class.StoryWorld.image=storyBackground.png
 dependency1.from=MyWorld
 dependency1.to=StoryWorld
 dependency1.type=UsesDependency
@@ -10,7 +11,7 @@ editor.fx.0.height=1024
 editor.fx.0.width=865
 editor.fx.0.x=847
 editor.fx.0.y=0
-height=1024
+height=1033
 package.numDependencies=2
 package.numTargets=3
 project.charset=UTF-8
@@ -49,7 +50,7 @@ target3.width=120
 target3.x=0
 target3.y=0
 version=3.1.0
-width=1245
+width=1721
 world.lastInstantiated=MyWorld
-xPosition=246
+xPosition=0
 yPosition=0
