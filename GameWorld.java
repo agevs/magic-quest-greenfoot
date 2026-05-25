@@ -15,7 +15,15 @@ public class GameWorld extends World
      */
     public GameWorld()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
+        super(1000, 600, 1);
+
+        GreenfootImage bg = new GreenfootImage("gameBackground.png");
+
+        int x = (getWidth() - bg.getWidth()) / 2;
+
+        getBackground().drawImage(bg, x, 0);
+
+        // Agregar jugador
+        addObject(new Player(), 150, 520);
     }
 }
