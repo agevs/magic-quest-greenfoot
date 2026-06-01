@@ -95,10 +95,8 @@ public class StoryWorld extends World
         int x = (getWidth() - bg.getWidth()) / 2;
 
         fondo.drawImage(bg, x, 0);
-
-        // =========================================
+        
         // TEXTO TYPEWRITER CON PANEL FANTASY
-        // =========================================
         if(!controles)
         {
             // PANEL
@@ -131,9 +129,7 @@ public class StoryWorld extends World
             fondo.drawImage(texto, textoX, 280);
         }
 
-        // =========================================
         // CONTROLES
-        // =========================================
         if(controles)
         {
             // PANEL FANTASY

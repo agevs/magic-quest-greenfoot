@@ -25,9 +25,7 @@ public class Player extends Actor
         saltar();
     }
 
-    // =====================================
-    // MOVIMIENTO
-    // =====================================
+    //Movimiento
     public void mover()
     {
         if(Greenfoot.isKeyDown("a"))
@@ -41,9 +39,7 @@ public class Player extends Actor
         }
     }
 
-    // =====================================
     // GRAVEDAD SIMPLE
-    // =====================================
     public void aplicarGravedad()
     {
         velocidadVertical += gravedad;
@@ -73,20 +69,11 @@ public class Player extends Actor
             enSuelo = true;
         }
 
-        // Suelo principal
-        if(getY() > 520)
-        {
-            setLocation(getX(), 520);
-
-            velocidadVertical = 0;
-
-            enSuelo = true;
-        }
+    
     }
 
-    // =====================================
-    // SALTO SIMPLE
-    // =====================================
+    
+    // SALTO 
     public void saltar()
     {
         if(Greenfoot.isKeyDown("space") && enSuelo)
