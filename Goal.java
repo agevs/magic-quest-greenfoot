@@ -19,9 +19,8 @@ public class Goal extends Actor
             if(jugador.getY() < getY() - 20)
             {
                 Greenfoot.playSound("win.mp3");
-                Greenfoot.stop();
 
-                getWorld().showText("¡GANASTE!", 512, 280);
+                Greenfoot.setWorld(new VictoryWorld());
             }
         }
     }

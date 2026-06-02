@@ -65,8 +65,7 @@ public class GameWorld extends World
         {
             Greenfoot.playSound("gameover.mp3");
             
-            showText("GAME OVER", 512, 280);
-            Greenfoot.stop();
+            Greenfoot.setWorld(new GameOverWorld());
 
             
         }
