@@ -54,7 +54,7 @@ public class GameWorld extends World
         // Enemigo
         addObject(new Enemy(), 300, 150);
     }
-     //Vidasd
+     //Vidas
     public void perderVida()
     {
         vidas--;
@@ -64,9 +64,11 @@ public class GameWorld extends World
         if(vidas <= 0)
         {
             Greenfoot.playSound("gameover.mp3");
+            
             showText("GAME OVER", 512, 280);
-
             Greenfoot.stop();
+
+            
         }
     }
 

@@ -10,20 +10,25 @@ public class GameOverWorld extends World
 {
     public GameOverWorld()
     {
-        super(1024, 576, 1);
+    super(1024, 576, 1);
 
-        showText("GAME OVER", 512, 200);
+    GreenfootImage bg =
+        new GreenfootImage("gameoverBackground.png");
 
-        showText("Presiona R para reintentar", 512, 280);
+    getBackground().drawImage(bg, 0, 0);
 
-        showText("Presiona A para ver anuncio y recuperar una vida", 512, 340);
+    showText("GAME OVER", 512, 200);
+
+    showText("Pyresiona M para volver al menú principal", 512, 280);
+
+    showText("Presiona A para ver anuncio y continuar", 512, 340);
     }
 
     public void act()
     {
-        if(Greenfoot.isKeyDown("r"))
+        if(Greenfoot.isKeyDown("m"))
         {
-            Greenfoot.setWorld(new GameWorld());
+            Greenfoot.setWorld(new MyWorld());
         }
 
         if(Greenfoot.isKeyDown("a"))
