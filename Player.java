@@ -68,6 +68,14 @@ public class Player extends Actor
 
             enSuelo = true;
         }
+        if(getY() > 560)
+        {
+            ((GameWorld)getWorld()).perderVida();
+
+            setLocation(120, 430);
+
+            velocidadVertical = 0;
+        }
 
     
     }

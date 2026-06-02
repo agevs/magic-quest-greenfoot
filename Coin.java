@@ -14,6 +14,9 @@ public class Coin extends Actor
 
         if(jugador != null)
         {
+            // Sonido de moneda
+            Greenfoot.playSound("coin.mp3");
+            
             ((GameWorld)getWorld()).sumarMoneda();
 
             getWorld().removeObject(this);

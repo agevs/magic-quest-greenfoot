@@ -8,7 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class StoryWorld extends World
 {
-     private String[] mensajes =
+    private GreenfootSound musicaHistoria;
+    private String[] mensajes =
     {
         "Las gemas mágicas del bosque han sido robadas...",
         "Kai deberá recuperar la energía perdida."
@@ -28,6 +29,10 @@ public class StoryWorld extends World
     public StoryWorld()
     {
         super(1000, 600, 1);
+        
+        musicaHistoria = new GreenfootSound("menu_theme_2.mp3");
+        musicaHistoria.setVolume(30);
+        musicaHistoria.play();
 
         actualizarPantalla();
     }
@@ -81,6 +86,7 @@ public class StoryWorld extends World
 
             if(Greenfoot.isKeyDown("enter"))
             {
+                musicaHistoria.stop();
                 Greenfoot.setWorld(new GameWorld());
             }
         }

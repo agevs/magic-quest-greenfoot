@@ -10,6 +10,7 @@ public class MyWorld extends World
 {
     private int timer = 0;
     private boolean mostrarTexto = true;
+    private GreenfootSound musicaMenu;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -17,7 +18,11 @@ public class MyWorld extends World
      public MyWorld()
     {    
         super(1000, 600, 1);
-
+        
+        musicaMenu = new GreenfootSound("menu_theme_1.mp3");
+        musicaMenu.setVolume(30);
+        musicaMenu.play();
+        
         actualizarPantalla();
     }
 
@@ -35,6 +40,7 @@ public class MyWorld extends World
         // Cambiar a StoryWorld
         if(Greenfoot.isKeyDown("enter"))
         {
+            musicaMenu.stop();
             Greenfoot.setWorld(new StoryWorld());
         }
     }
